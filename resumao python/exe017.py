@@ -8,7 +8,7 @@ if tipo_combustivel == 'G' or tipo_combustivel == 'g':
     valor_total = litros_vendidos * 3.30
 
 elif tipo_combustivel == 'A' or tipo_combustivel == 'a':
-    valor_total = litros_vendidos * 2.50
+    valor_total = litros_vendidos * 2.90
 
 else:
     print("Tipo de combustível inválido!")
