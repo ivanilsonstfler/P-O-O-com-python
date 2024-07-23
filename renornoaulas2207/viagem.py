@@ -1,32 +1,30 @@
 class Viagem:
     def __init__(self, destino):
-        
         self.destino = destino
         
+    def exibir_info(self):
+        return f"Destino: {self.destino}"
+        
 Viagem0 = Viagem("Bonito/MS")
-Viagem1 = Viagem("foz do iguaçu")
+Viagem1 = Viagem("Foz do Iguaçu")
 Viagem2 = Viagem("Santa Catarina/SC")
-Viagem3 = Viagem("BELO HORIZONTE/ MG")
-Viagem4 = Viagem("PANTANAL")
+Viagem3 = Viagem("Belo Horizonte/MG")
+Viagem4 = Viagem("Pantanal")
 
+print("BEM-VINDO")
 
-print("bEM-vINDO")
-viajante = input("Digite seu nome para começar")
-print(f"{viajante} temos 5 destimos que conbina com vc:"
-  '''    
-[0] bonito
-[1] foz do iguaçu
-[2] santa catarina
-[3] belo horizonte
-[4] pantanl
-''')
+viajante = input("Digite seu nome para começar: ")
+print(f"{viajante}, temos 5 destinos que combinam com você:")
+print("[0] Bonito")
+print("[1] Foz do Iguaçu")
+print("[2] Santa Catarina")
+print("[3] Belo Horizonte")
+print("[4] Pantanal")
 
-opcao_selecionada = int(input("selecione o numero da viagem desejada"))
-lista_viagem =[Viagem0,Viagem1,Viagem2,Viagem3,Viagem4]
+opcao_selecionada = int(input("Selecione o número da viagem desejada: "))
+lista_viagem = [Viagem0, Viagem1, Viagem2, Viagem3, Viagem4]
 
-   
-if opcao_selecionada >= 5:
-    print("esta opçao n esta inclusa no nossos destinos")
-    
-if opcao_selecionada <= 4:
-    print(f'{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino}')
+if 0 <= opcao_selecionada < 5:
+    print(f"{viajante}, sua viagem será para {lista_viagem[opcao_selecionada].exibir_info()}.")
+else:
+    print("Essa opção não está inclusa nos nossos destinos!")
