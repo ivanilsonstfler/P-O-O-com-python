@@ -24,7 +24,9 @@ print(f"{viajante} temos 5 destimos que conbina com vc:"
 opcao_selecionada = int(input("selecione o numero da viagem desejada"))
 lista_viagem =[Viagem0,Viagem1,Viagem2,Viagem3,Viagem4]
 
-   
+
+
+    
 if opcao_selecionada >= 5:
     print("esta opçao n esta inclusa no nossos destinos")
     
